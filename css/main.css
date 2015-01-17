@@ -1,5 +1,7 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 html,
 button,
 input,
@@ -40,7 +42,7 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px 'Meiryo', Helvetica, Arial;
+    font: 16px/26px 'Open Sans', 'Meiryo', sans-serif;
 }
 
 .wrapper {
@@ -66,6 +68,16 @@ body {
    Author's custom styles
    ========================================================================== */
 
+#welcome {
+    padding-top: 200px;
+    height: 400px;
+    text-align: center;
+}
+
+#slider {
+    display: none;
+}
+
 .question {
     display: block;
     margin-bottom: 2em;
@@ -84,7 +96,7 @@ body {
 #slider {
     position: relative;
     overflow: hidden;
-    height: 600px;
+    height: 1900px;
 }
 
 #slider > .set {
@@ -154,6 +166,10 @@ button {
         -webkit-box-shadow: 0 5px 10px #eee;
            -moz-box-shadow: 0 5px 10px #eee;
                 box-shadow: 0 5px 10px #eee;
+    }
+
+    #slider {
+        height: 1100px;
     }
 
     .title {

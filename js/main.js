@@ -54,15 +54,15 @@ var questions = [
 $(document).ready(function () {
 	for (var i = 0; i < questions.length; i++) {
 		var $set;
-		if (i%5 == 0)
+		if (i%10 == 0)
 			$set = $('<div class="set"></div>');
-		var $question = $('<div class="question"><h4>' + questions[i].q + '</h4><div class="options"></div></div>');
+		var $question = $('<div class="question"><h4>' + (i+1) + '. ' + questions[i].q + '</h4><div class="options"></div></div>');
 		for (var j = 0; j < options.length; j++) {
 			$question.find('.options').append('<div class="option"><input type="radio" name="q-' + i + '" value="' + questions[i].score[j] + '"><label>' + options[j] + '</label></div></div>');
 		};
 		$set.append($question);
-		if(i%5 == 4){
-			if (i/5 > 1) 
+		if(i%10 == 9){
+			if (i/10 > 1) 
 				$set.append('<button class="btn prev">上一頁</button>');
 			if (i==49)
 				$set.append('<button class="btn finish">完成！</button>');
@@ -76,11 +76,16 @@ $(document).ready(function () {
 	});
 	var slider = $('#slider').stupidSlider().data('stupidSlider');
 	var body = $('html, body');
+    $('.start').click(function() {
+        $('#welcome').hide();
+        $('#slider').show();
+    });
 	$('.next').click(function() {
 		var pass = true;
 		$(this).siblings().not('button').each(function() {
 			if($(this).find('input:checked').length == 0){
 				pass = false;
+                body.animate({scrollTop: $(this).offset().top}, 200);
 				$(this).css('background-color', 'rgba(255, 249, 192, 1)').delay(1000).queue(function(){
 				    $(this).css('background-color', 'rgba(255, 249, 192, 0)').dequeue();
 				});
@@ -96,7 +101,8 @@ $(document).ready(function () {
 		var pass = true;
 		$(this).siblings().not('button').each(function() {
 			if($(this).find('input:checked').length == 0){
-				pass = false;				
+				pass = false;
+                body.animate({scrollTop: $(this).offset().top}, 200);			
 				$(this).css('background-color', 'rgba(255, 249, 192, 1)').delay(1000).queue(function(){
 				    $(this).css('background-color', 'rgba(255, 249, 192, 0)').dequeue();
 				});
@@ -104,6 +110,7 @@ $(document).ready(function () {
 			}
 		});
 		if(pass) {
+            body.animate({scrollTop: 0}, 200);
 			$('#slider').hide();
 			$('#result').removeClass('hidden');
 			var score = 0;
