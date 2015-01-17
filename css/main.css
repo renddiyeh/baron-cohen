@@ -84,7 +84,6 @@ body {
 #slider {
     position: relative;
     overflow: hidden;
-    margin-top: 3em;
     height: 600px;
 }
 
@@ -128,6 +127,11 @@ button {
     margin-right: 1em;
 }
 
+#result {
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
 #result > * {
     text-align: center;
 }
@@ -137,6 +141,25 @@ button {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 640px) {
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container {
+        -webkit-box-shadow: 0 5px 10px #eee;
+           -moz-box-shadow: 0 5px 10px #eee;
+                box-shadow: 0 5px 10px #eee;
+    }
+
+    .title {
+        float: left;
+    }
+
     .option {
         float: left;
         margin-right: 2em;
@@ -151,31 +174,17 @@ button {
     .options:after {
         clear: both;
     }
-}
-
-@media only screen and (min-width: 768px) {
-
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
-    .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
 
 }
 
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 960px) {
 
 /* ===============
     Maximal Width
    =============== */
 
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: 900px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
 }
