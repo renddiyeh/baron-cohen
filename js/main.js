@@ -93,9 +93,10 @@ $(document).ready(function () {
 			}
 		});
 		if(pass) {
-			body.animate({scrollTop: 0}, 200, slider.next);
+			body.animate({scrollTop: 0}, 200);
+            slider.next();
 		};
-	} );
+	});
 	$('.prev').click(slider.previous);
 	$('.finish').click(function() {
 		var pass = true;
