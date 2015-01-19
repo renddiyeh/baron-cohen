@@ -162,7 +162,6 @@ button.start {
     margin-top: 1em;
     width: 80%;
     margin: 0 auto;
-    text-indent: 2em;
 }
 footer {
     color: white;
@@ -189,6 +188,14 @@ footer {
     
     #welcome {
         padding-top: 200px;
+    }
+
+    #welcome > h4, #result > h4 {
+        width: 50%;
+    }
+
+    #slider {
+        height: 1100px;
     }
 
     #slider {
@@ -232,7 +239,7 @@ footer {
     }
 
     #welcome > h4, #result > h4 {
-        width: 50%;
+        width: 450px;
     }
 
 }
