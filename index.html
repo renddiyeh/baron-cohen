@@ -2,8 +2,14 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
+        <!-- for Facebook -->          
+        <meta property="og:title" content="亞斯柏格成人量表" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="http://relab.cc/baron-cohen" />
+        <meta property="og:description" content="英國劍橋大學的自閉症研究中心，針對正常智商的成年人，使用三種商數量表作為篩檢工具，協助診斷亞斯伯格症或高功能自閉症。" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>亞斯柏格成人量表</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,22 +21,26 @@
     <body>
         <div class="header-container">
             <header class="wrapper clearfix">
-                <h1 class="title">h1.title</h1>
+                <h2 class="title">亞斯柏格成人量表</h2>
             </header>
         </div>
         <div class="main-container">
-            <div id="slider" class="main wrapper clearfix">
-
-            </div> <!-- #main -->
+            <div id="welcome">
+                    
+                    <h4>英國劍橋大學的自閉症研究中心，針對正常智商的成年人，使用三種商數量表作為篩檢工具，協助診斷亞斯伯格症或高功能自閉症。接下來你將進行的測驗，是其中由Baron-Cohen S., Wheelwright S.及其他同事於2001年所提出的自閉類群商數（autism spectrum quotient）。</h4>
+                    <h2>共50題，花個三分鐘填答吧！</h2>
+                    <button class="start">開始測驗</button>
+            </div>
+            <div id="slider" class="main wrapper clearfix"></div> <!-- #main -->
             <div id="result" class="hidden">
-                <h2>你的分數是<span id="score"></span></h2>
-                <h3>80%的亞斯伯格，得分>=32</h3>
+                <h1>你的分數：<span id="score"></span></h1>
+                <h4>此測驗最高得分是50分，根據研究發現，80%的亞斯個案分數會大於32分。此量表是三項篩檢工具的其中之一，結果無法代表最終診斷，若有任何疑問應直接尋求專家諮詢。</h4>
             </div>
         </div> <!-- #main-container -->
 
         <div class="footer-container">
             <footer class="wrapper">
-                <h3>footer</h3>
+                footer
             </footer>
         </div>
 
@@ -41,12 +51,14 @@
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-58674730-1', 'auto');
+          ga('send', 'pageview');
+
         </script>
     </body>
 </html>

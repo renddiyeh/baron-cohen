@@ -1,5 +1,7 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 html,
 button,
 input,
@@ -40,7 +42,7 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px 'Meiryo', Helvetica, Arial;
+    font: 16px/26px 'Open Sans', 'Meiryo', sans-serif;
 }
 
 .wrapper {
@@ -66,15 +68,31 @@ body {
    Author's custom styles
    ========================================================================== */
 
+#welcome {
+    height: 400px;
+    text-align: center;
+}
+
+#welcome > h4 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    text-indent: 2em;
+}
+
+#slider {
+    display: none;
+}
+
 .question {
     display: block;
-    margin-bottom: 2em;
     background-color: rgba(255, 249, 192, 0);
     -webkit-transition: background-color 500ms ease;
     -moz-transition: background-color 500ms ease;
     -ms-transition: background-color 500ms ease;
     -o-transition: background-color 500ms ease;
     transition: background-color 500ms ease;
+    padding: .5em;
 }
 
 .option label {
@@ -84,7 +102,7 @@ body {
 #slider {
     position: relative;
     overflow: hidden;
-    height: 600px;
+    height: 1900px;
 }
 
 #slider > .set {
@@ -125,17 +143,30 @@ body {
 
 button {
     margin-right: 1em;
+    margin-top: 1em;
+}
+
+button.start {
+    margin-top: 2em;
 }
 
 #result {
-    padding-top: 200px;
     padding-bottom: 100px;
 }
 
-#result > * {
+#result > h1 {
     text-align: center;
 }
 
+#result > h4 {
+    margin-top: 1em;
+    width: 80%;
+    margin: 0 auto;
+    text-indent: 2em;
+}
+footer {
+    color: white;
+}
 
 /* ==========================================================================
    Media Queries
@@ -154,6 +185,14 @@ button {
         -webkit-box-shadow: 0 5px 10px #eee;
            -moz-box-shadow: 0 5px 10px #eee;
                 box-shadow: 0 5px 10px #eee;
+    }
+    
+    #welcome {
+        padding-top: 200px;
+    }
+
+    #slider {
+        height: 1100px;
     }
 
     .title {
@@ -174,6 +213,10 @@ button {
     .options:after {
         clear: both;
     }
+    
+    #result {
+        padding-top: 200px;
+    }   
 
 }
 
@@ -187,6 +230,11 @@ button {
         width: 900px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
+
+    #welcome > h4, #result > h4 {
+        width: 50%;
+    }
+
 }
 
 /* ==========================================================================
